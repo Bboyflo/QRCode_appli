@@ -85,5 +85,6 @@
     <plugin name="phonegap-plugin-barcodescanner" spec="8.0.1" />
     <plugin name="cordova-plugin-x-socialsharing" spec="5.4.4" />
     <plugin name="cordova-plugin-filechooser" spec="1.2.0" />
+    <plugin name="com-badrit-base64" spec="0.2.0" />
     <engine name="android" spec="7.1.4" />
 </widget>

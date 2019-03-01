@@ -15,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { HistoryListProvider } from '../providers/history-list/history-list';
-import { FileChooser } from '@ionic-native/file-chooser/ngx';
+import { FileChooser } from '@ionic-native/file-chooser';
+import { Base64 } from '@ionic-native/base64';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { FileChooser } from '@ionic-native/file-chooser/ngx';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FileChooser,
     QrCodeProvider,
+    Base64,
     BarcodeScanner,
     SocialSharing,
     HistoryListProvider,

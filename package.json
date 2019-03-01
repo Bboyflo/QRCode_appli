@@ -21,10 +21,10 @@
     "@angular/platform-browser": "5.0.0",
     "@angular/platform-browser-dynamic": "5.0.0",
     "@ionic-native/barcode-scanner": "4.2.0",
-    "@ionic-native/base64": "^5.2.0",
+    "@ionic-native/base64": "^4.2.0",
     "@ionic-native/core": "4.3.2",
     "@ionic-native/file": "^5.2.0",
-    "@ionic-native/file-chooser": "^5.2.0",
+    "@ionic-native/file-chooser": "^4.20.0",
     "@ionic-native/file-path": "^5.2.0",
     "@ionic-native/file-transfer": "^5.2.0",
     "@ionic-native/social-sharing": "^4.20.0",
@@ -33,6 +33,7 @@
     "@ionic/storage": "2.1.3",
     "angular": "^1.7.7",
     "angularx-qrcode": "^1.5.3",
+    "com-badrit-base64": "0.2.0",
     "cordova-android": "7.1.4",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-filechooser": "1.2.0",
@@ -72,7 +73,8 @@
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-filechooser": {}
+      "cordova-plugin-filechooser": {},
+      "com-badrit-base64": {}
     },
     "platforms": [
       "android"
