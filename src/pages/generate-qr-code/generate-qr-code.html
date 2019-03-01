@@ -1,0 +1,26 @@
+<!--
+  Generated template for the GenerateQrCodePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>GenerateQRCode</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>  
+  <ion-item>
+    <ion-input type="text" placeholder="Écrire le texte à encoder" [(ngModel)]="encodeData">
+    </ion-input>
+  </ion-item>
+  <button ion-button (click)="encodeText()">Générer le QR Code</button>
+  <div *ngIf="qrCodeVisible">
+    <img [src]='encodedData'>
+  </div>
+  <button ion-button (click)="share()" [disabled]="btnShare">Partager le QR Code</button>
+</ion-content>
