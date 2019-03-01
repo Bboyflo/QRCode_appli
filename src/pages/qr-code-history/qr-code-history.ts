@@ -20,8 +20,6 @@ export class QrCodeHistoryPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private historyListProvider: HistoryListProvider) {
     this.listHistoryQRCode = this.historyListProvider.getListHistory();
-    alert(this.listHistoryQRCode);
-    alert(this.historyListProvider.listQRCodeGenerate);
   }
   
 }

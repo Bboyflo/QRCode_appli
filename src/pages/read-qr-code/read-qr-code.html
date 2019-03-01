@@ -18,6 +18,7 @@
 <ion-content padding>
   
   <button ion-button full icon-left (click)="scanQRCode()"><ion-icon name="qr-scan"></ion-icon>Scan QR Code</button>
+  <button ion-button full icon-left (click)="readFileQrCode()"><ion-icon name="qr-upload"></ion-icon>importer un QR Code</button>
   <ion-card *ngIf="scannedQRCode">
     <ion-card-content>
       Le Texte contenu dans le QR Code est : {{ scannedQRCode }}

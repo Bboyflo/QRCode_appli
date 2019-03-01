@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { HistoryListProvider } from '../providers/history-list/history-list';
+import { FileChooser } from '@ionic-native/file-chooser/ngx';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -39,6 +42,7 @@ import { HistoryListProvider } from '../providers/history-list/history-list';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FileChooser,
     QrCodeProvider,
     BarcodeScanner,
     SocialSharing,

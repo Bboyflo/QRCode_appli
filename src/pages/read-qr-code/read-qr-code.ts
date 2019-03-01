@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { FileChooser } from '@ionic-native/file-chooser/ngx';
 
 /**
  * Generated class for the ReadQrCodePage page.
@@ -18,7 +19,8 @@ export class ReadQrCodePage {
 
   scannedQRCode = null;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner,
+     public fileChooser: FileChooser) {
   }
 
   ionViewDidLoad() {
@@ -29,5 +31,11 @@ export class ReadQrCodePage {
     this.barcodeScanner.scan().then(barcodeData => {
       this.scannedQRCode = barcodeData.text;
     })
+  }
+
+  readFileQrCode(){
+    this.fileChooser.open()
+    .then(uri => uri)
+    .catch(e => console.log(e));
   }
 }

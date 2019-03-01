@@ -22,6 +22,7 @@ export class GenerateQrCodePage {
   public encodedData: string= null;
   public qrCodeVisible: boolean = false;
   public btnShare: boolean = true;
+  public dateGenerate: Date;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private qrCodeProvider: QrCodeProvider
     , private socialSharing: SocialSharing, private historyListProvider: HistoryListProvider) {
@@ -36,7 +37,8 @@ export class GenerateQrCodePage {
       this.qrCodeProvider.generate(this.encodeData).then((url) => {
         this.qrCodeVisible = true
         this.encodedData = url
-        this.historyListProvider.setListHistory(this.encodedData + " / Date : " + Date.now.toString())
+        this.dateGenerate = new Date();
+        this.historyListProvider.setListHistory(this.encodeData + " / Date : " + this.dateGenerate)
         this.btnShare = false
         ,(error) =>
         alert(error)
